@@ -1,0 +1,125 @@
+// Переменные с цветами
+
+$light-color: #eeeeee
+$gray-color: #999999
+$dark-color: #4d4d4d
+
+// Переменные для шрифта
+
+$font-stack: "Lora", serif
+$font-size: 16px
+$font-weight: 500
+
+// Основной стиль текста
+
+@mixin text
+    line-height: 130%
+    font-size: $font-size
+    font-family: $font-stack
+    font-weight: $font-weight
+    margin: 0
+    padding: 0
+    color: $dark-color
+
+// Основной текст
+
+.primary-text
+    @include text
+
+// Второстепенный текст
+
+.secondary-text
+    @include text
+    color: $gray-color
+
+// Заголовок
+
+.heading
+    @include text
+    font-size: 3em
+    line-height: 100%
+    margin-bottom: 0.5em
+
+// Подзаголовок
+
+.title
+    @include text
+    font-size: 2em
+    line-height: 130%
+    margin-bottom: 0.5em
+
+// Ссылка
+
+.link
+    @include text
+    font-size: 1em
+    text-decoration: none
+    line-height: inherit
+    transition: 200ms
+    &:hover
+        transition: 200ms
+        font-size: 1em
+        color: $gray-color
+
+// Обязательный блок в котором всё лежит
+
+body
+    background-color: $light-color
+    overflow-x: none
+    margin: 0
+    padding: 0
+
+// Блок который ограничивает контент по ширине
+
+.container
+    max-width: 800px
+    margin: 0 auto
+
+// Шапка сайта. В ней меню и ссылка на главную
+
+header
+    height: 4em
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 2em
+
+// Подвал сайта. В нём годы и Свердловск
+
+footer
+    height: 4em
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 2em
+
+// Фотки 100% ширины
+
+img
+    width: 100%
+
+.main
+    display: flex
+    height: 100vh
+    align-items: center
+    margin: 0
+    padding: 0
+    overflow: hidden
+    .image
+        width: 100%
+        height: auto
+        overflow: hidden
+    .text
+        width: 100%
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin: 0 2em
+        .text-info
+            margin: 0 auto
+            text-align: center
+.quote
+    text-align: right
+.lines
+    text-align: center
