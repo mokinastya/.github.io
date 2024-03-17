@@ -126,19 +126,19 @@ img {
   text-align: right;
 }
 
+.lines {
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   body {
     padding: 0 2em;
-  }  
+  }
   .main {
     flex-direction: column;
     margin: 0;
   }
-  .image {
+  .main .image {
     display: none;
   }
 }
-
-.lines {
-  text-align: center;
-}/*# sourceMappingURL=main.css.map */
